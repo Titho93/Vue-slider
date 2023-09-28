@@ -24,6 +24,12 @@ createApp ({
                 this.counter++;
             }else{
                 this.counter--;
+            };
+
+            if(this.counter === this.images.lenght){
+                this.counter = 0;
+            }else if(this.counter < 0){
+                this.counter = this.images.lenght -1;
             }
         }
         
