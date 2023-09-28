@@ -83,7 +83,7 @@ img {
   filter: brightness(0.3);
 }
 
-.thumb .active {
+.active {
   border: 3px solid white;
   filter: none;
 }

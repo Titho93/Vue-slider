@@ -19,15 +19,21 @@
       <div class="slider">
         
         <div class="imageCont">
-          <img src="./img/01.webp" alt="">
+          <img :src="images[counter]">
         </div>
         <div class="slider-right">
-          <div class="btn up"><i class="fa-solid fa-chevron-up"></i></div>
-          <div class="btn down"><i class="fa-solid fa-chevron-down"></i></div>
+          <div @click="nextPrev(false)" class="btn up">
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <div @click="nextPrev(true)" class="btn down">
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
           <div class="thumb">
             <img
-            v-for="(image) in images" 
+            v-for="(image, index) in images" 
+            @click="counter = index"
             :src="image"
+            :class="{'active': index === counter}" 
             >
           </div>
 
