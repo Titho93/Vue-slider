@@ -53,10 +53,6 @@ img {
   object-fit: cover;
 }
 
-.hide {
-  display: none;
-}
-
 .btn {
   position: absolute;
   background-color: white;
@@ -86,18 +82,4 @@ img {
 .thumb .active {
   border: 3px solid white;
   filter: none;
-}
-
-.imageCont .text {
-  position: absolute;
-  z-index: 999;
-  bottom: 10px;
-  color: white;
-  text-align: end;
-  padding-right: 5px;
-  font-size: 20px;
-}
-
-.imageCont .text p {
-  font-size: 15px;
 }
