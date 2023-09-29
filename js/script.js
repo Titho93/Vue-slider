@@ -14,7 +14,8 @@ createApp ({
                 './img/05.webp'
             ],
             
-            counter: 0
+            counter: 0,
+            runAutoSlide: true
         }
 
     },
@@ -32,8 +33,11 @@ createApp ({
                 this.counter = this.images.length -1;
             }
         }
-        
-
+    },
+    mounted(){
+        setInterval(() => {
+           if(this.runAutoSlide) this.nextPrev(true);
+        }, 2000)
     }
     
 
